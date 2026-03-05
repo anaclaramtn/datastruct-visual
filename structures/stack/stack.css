@@ -97,7 +97,7 @@
   background: var(--surface);
   border: 1px solid var(--border);
   padding: 20px;
-  font-size: 0.78rem;
+  font-size: 1rem;
   line-height: 1.8;
   flex: 1;
 }
@@ -122,4 +122,26 @@
     opacity: 0;
     transform: translateY(-20px);
   }
+}
+
+.code-line {
+  padding: 2px 4px;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.code-line.active {
+  background: rgba(248, 246, 246, 0.336);
+  color: white;
+}
+
+.kw { color: #ff79c6; }
+.fn { color: var(--accent3, #4d9fff); }
+
+.indent {
+  padding-left: 20px;
+}
+
+.indent-2 {
+  padding-left: 40px;
 }

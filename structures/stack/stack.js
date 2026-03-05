@@ -86,10 +86,16 @@ function addLog(msg, color = 'var(--accent)') {
 document.getElementById('btn-insert').addEventListener('click', () => {
   const val = parseInt(input.value);
   if (isNaN(val)) { addLog('invalid value', 'var(--muted)'); return; }
-  if (stack.size() >= 10) { addLog('stack overflow!', '#ff6b35'); return; }
-  stack.push(val);
-  render();
-  addLog(`push(${val})`);
+  if (stack.size() >= 8) { addLog('stack overflow!', '#ff6b35'); return; }
+  
+  highlightLine('cl-push');
+  setTimeout(() => highlightLine('cl-push-body'), 300);
+  setTimeout(() => {
+    stack.push(val);
+    render();
+    addLog(`push(${val})`);
+  }, 600);
+
   input.value = '';
 });
 
@@ -99,16 +105,26 @@ input.addEventListener('keydown', e => {
 });
 
 document.getElementById('btn-remove').addEventListener('click', () => {
-  if (stack.isEmpty()) { addLog('stack is empty', 'var(--muted)'); return; }
+  if (stack.isEmpty()) {
+    highlightLine('cl-pop-check');
+    addLog('stack is empty', 'var(--muted)');
+    return;
+  }
+
+  highlightLine('cl-pop');
+  setTimeout(() => highlightLine('cl-pop-check'), 300);
+  setTimeout(() => highlightLine('cl-pop-body'), 600);
 
   const topElement = canvas.querySelector('div > div:last-child');
   if (topElement) {
+    topElement.style.borderColor = '#ff6b35';
+    topElement.style.color = '#ff6b35';
     topElement.style.animation = 'slideOut 0.3s ease forwards';
     setTimeout(() => {
       const val = stack.pop();
       render();
       addLog(`pop() → ${val}`, '#ff6b35');
-    }, 300);
+    }, 900);
   }
 });
 
@@ -122,3 +138,10 @@ document.getElementById('btn-clear').addEventListener('click', () => {
 document.getElementById('btn-clear-output').addEventListener('click', () => {
   log.innerHTML = '';
 });
+
+// animated code
+function highlightLine(id) {
+  document.querySelectorAll('.code-line').forEach(l => l.classList.remove('active'));
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+}

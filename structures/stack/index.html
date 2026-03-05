@@ -32,7 +32,26 @@
 
     <div class="code-panel">
       <div class="panel-label">implementation</div>
-      <div class="code-block" id="code-block"></div>
+      <div class="code-block" id="code-block">
+        <div class="code-line" id="cl-class"><span class="kw">class</span> <span class="fn">Stack</span> {</div>
+        <div class="code-line indent" id="cl-constructor">  <span class="kw">constructor</span>() {</div>
+        <div class="code-line indent-2" id="cl-items">    <span class="kw">this</span>.items = [];</div>
+        <div class="code-line indent">  }</div>
+        <div class="code-line"> </div>
+        <div class="code-line indent" id="cl-push">  <span class="fn">push</span>(val) {</div>
+        <div class="code-line indent-2" id="cl-push-body">    <span class="kw">this</span>.items.<span class="fn">push</span>(val);</div>
+        <div class="code-line indent">  }</div>
+        <div class="code-line"> </div>
+        <div class="code-line indent" id="cl-pop">  <span class="fn">pop</span>() {</div>
+        <div class="code-line indent-2" id="cl-pop-check">    <span class="kw">if</span> (<span class="kw">this</span>.<span class="fn">isEmpty</span>()) <span class="kw">return</span> <span class="fn">null</span>;</div>
+        <div class="code-line indent-2" id="cl-pop-body">    <span class="kw">return</span> <span class="kw">this</span>.items.<span class="fn">pop</span>();</div>
+        <div class="code-line indent">  }</div>
+        <div class="code-line"> </div>
+        <div class="code-line indent" id="cl-isempty">  <span class="fn">isEmpty</span>() {</div>
+        <div class="code-line indent-2" id="cl-isempty-body">    <span class="kw">return</span> <span class="kw">this</span>.items.length === <span class="fn">0</span>;</div>
+        <div class="code-line indent">  }</div>
+        <div class="code-line">}</div>
+      </div>
     </div>
 
   </div>
