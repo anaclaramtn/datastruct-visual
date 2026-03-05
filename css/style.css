@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --border: #1e1e1e;
+  --accent: #00ff88;
+  --text: #e8e8e8;
+  --muted: #555555;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: monospace;
+  min-height: 100vh;
+}
+
+nav {
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+}
+
+nav span {
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.hero {
+  padding: 80px 40px 60px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.grid-section {
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.card p {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.card a {
+  font-size: 0.75rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
