@@ -12,6 +12,7 @@ Interactive visualizations of data structures.
 
 ### Structures built so far
 - [Stack](structures/stack/index.html)
+- [Static List](structures/static-list/index.html)
 
 ### How to run
 Clone the repository and open `index.html` with a live server.
