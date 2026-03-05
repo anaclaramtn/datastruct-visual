@@ -5,9 +5,10 @@
 
 Interactive visualizations of data structures.
 
-### An academic project with the following purposes:
+### An personal project with the following purposes:
 - Apply and reinforce data structures concepts visually
-- Practice vanilla HTML, CSS and JavaScript
+- Helping other students who have difficulty visualizing data structures
+- Practice HTML, CSS and JavaScript
 - Build a portfolio project without frameworks or dependencies
 
 ### Structures built so far
