@@ -1,0 +1,125 @@
+.ds-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 61px);
+}
+
+.visualizer {
+  border-right: 1px solid var(--border);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.code-panel {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.panel-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.canvas-area {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+.controls input {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px 14px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  width: 80px;
+  outline: none;
+}
+
+.controls input:focus {
+  border-color: var(--accent);
+}
+
+.controls button {
+  padding: 10px 18px;
+  font-family: monospace;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  text-transform: lowercase;
+  transition: all 0.2s;
+}
+
+.controls button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.log-area {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 12px 16px;
+  font-size: 0.72rem;
+  height: 120px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.log-area::before {
+  content: '> output';
+  color: var(--muted);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+
+.code-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+  font-size: 0.78rem;
+  line-height: 1.8;
+  flex: 1;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
