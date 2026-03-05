@@ -5,25 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>datastruct-visual</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%2302b337'>{}</text></svg>">
 </head>
 <body>
+    <canvas id="constellation"></canvas>
+    <script src="js/constellation.js"></script>
+
+    <!-- this one is for the bakground animations -->
+
     <nav>
-    <span>datastruct-visual</span>
+ 
+        <!--     
+                <span>datastruct-visual</span>
+            -->
+
     </nav>
 
     <main>
         <section class="hero">
-            <h1>datastruct-visual</h1>
-            <p>Interactive visualizations of data structures.</p>
+            <h1> <\> datastruct-visual</h1>
+            <p>Interactive visualizations of data structures, to understand how they work.</p>
         </section>
 
         <section class="grid-section">
-            <div class="card">
-                <span class="card-tag">O(1)</span>
-                <h2>Stack</h2>
-                <p>Last in, first out. Push and pop in constant time.</p>
-                <a href="structures/stack/index.html">Explore →</a>
-            </div>
+        <div class="card">
+            <span class="card-tag">O(1)</span>
+            <h2>Stack</h2>
+            <p>Last in, first out. Push and pop in constant time.</p>
+            <a href="structures/stack/index.html">View →</a>
+        </div>
+
+        <div class="card">
+            <span class="card-tag">O(1) access</span>
+            <h2>Static List</h2>
+            <p>Fixed size array. Direct access by index in constant time.</p>
+            <a href="structures/static-list/index.html">View →</a>
+        </div>
         </section>
     </main>
 </body>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static List — datastruct-visual</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="static-list.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%2302b337'>{}</text></svg>">
+</head>
+<body>
+
+    <nav>
+    <a href="../../index.html">← back</a>
+    <span>static list</span>
+    </nav>
+
+    <div class="ds-layout">
+
+    <div class="visualizer">
+      <div class="panel-label">visualization</div>
+      <div class="canvas-area" id="canvas"></div>
+      <div class="controls">
+        <input type="number" id="index-input" placeholder="index" min="0" max="9">
+        <input type="number" id="val-input" placeholder="value" min="0" max="999">
+        <button id="btn-insert">insert</button>
+        <button id="btn-remove">remove</button>
+        <button id="btn-clear">clear</button>
+        <button id="btn-clear-output">clear output</button>
+      </div>
+      <div class="log-area" id="log">
+      </div>
+    </div>
+
+    <div class="code-panel">
+      <div class="panel-label">implementation</div>
+      <div class="code-block" id="code-block"></div>
+    </div>
+
+  </div>
+
+  <script src="static-list.js"></script>
+</body>
+</html>

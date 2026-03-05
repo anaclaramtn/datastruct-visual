@@ -83,7 +83,7 @@ function addLog(msg, color = 'var(--accent)') {
   log.prepend(line);
 }
 
-document.getElementById('btn-push').addEventListener('click', () => {
+document.getElementById('btn-insert').addEventListener('click', () => {
   const val = parseInt(input.value);
   if (isNaN(val)) { addLog('invalid value', 'var(--muted)'); return; }
   if (stack.size() >= 10) { addLog('stack overflow!', '#ff6b35'); return; }
@@ -98,7 +98,7 @@ input.addEventListener('keydown', e => {
   if (e.key === 'Enter') document.getElementById('btn-push').click();
 });
 
-document.getElementById('btn-pop').addEventListener('click', () => {
+document.getElementById('btn-remove').addEventListener('click', () => {
   if (stack.isEmpty()) { addLog('stack is empty', 'var(--muted)'); return; }
 
   const topElement = canvas.querySelector('div > div:last-child');
@@ -112,7 +112,7 @@ document.getElementById('btn-pop').addEventListener('click', () => {
   }
 });
 
-document.getElementById('btn-clear-stack').addEventListener('click', () => {
+document.getElementById('btn-clear').addEventListener('click', () => {
   stack.items = [];
   render();
   addLog('cleared', 'var(--muted)');

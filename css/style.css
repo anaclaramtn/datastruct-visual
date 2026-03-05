@@ -11,6 +11,7 @@
   --accent: #00ff88;
   --text: #e8e8e8;
   --muted: #555555;
+  --matrix: #02b337;
 }
 
 body {
@@ -37,6 +38,7 @@ nav span {
 .hero {
   padding: 80px 40px 60px;
   border-bottom: 1px solid var(--border);
+  color: var(--accent);
 }
 
 .hero h1 {
@@ -47,7 +49,7 @@ nav span {
 
 .hero p {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .grid-section {
@@ -93,4 +95,13 @@ nav span {
 
 .card a:hover {
   text-decoration: underline;
+}
+
+#constellation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
