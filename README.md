@@ -17,3 +17,6 @@ Interactive visualizations of data structures.
 
 ### How to run
 Clone the repository and open `index.html` with a live server.
+
+### Screenshots
+<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/f68465cd-4769-47a9-b27c-51dec7c4a537" />
