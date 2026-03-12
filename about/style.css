@@ -1,0 +1,30 @@
+.about-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 61px);
+}
+
+.about-box {
+  background: rgba(30, 30, 30, 0.7);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  padding: 48px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-box h1 {
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+
+.about-box p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
